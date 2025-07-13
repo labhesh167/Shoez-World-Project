@@ -1,0 +1,21 @@
+<div class="edit-container">
+    <h2>Edit Product</h2>
+    <form (ngSubmit)="updateProduct()">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="product.name" name="name" required>
+
+        <label>Description</label>
+        <textarea [(ngModel)]="product.description" name="description" rows="3" required></textarea>
+
+        <label>Price (₹)</label>
+        <input type="number" [(ngModel)]="product.price" name="price" required>
+
+        <label>Image URL</label>
+        <input type="text" [(ngModel)]="product.image" name="image" required>
+
+        <label>Category ID</label>
+        <input type="number" [(ngModel)]="product.category.id" name="categoryId" required>
+
+        <button type="submit">Update Product</button>
+    </form>
+</div>

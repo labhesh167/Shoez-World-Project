@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  font-family: 'Poppins', sans-serif;
+}
+
+router-outlet {
+  flex: 1;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.hero-section {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  height: calc(100vh - 56px - 56px); /* navbar + footer height adjustment */
+  padding: 20px;
+}
+

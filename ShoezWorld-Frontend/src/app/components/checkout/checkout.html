@@ -1,0 +1,50 @@
+<div class="checkout-container">
+  <h2>🛒 Checkout</h2>
+
+  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+
+  <div *ngIf="!orderPlaced">
+    <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)" novalidate>
+
+      <label>Full Name:</label>
+      <input type="text" [(ngModel)]="fullName" name="fullName" required #fullNameInput="ngModel">
+      <div *ngIf="fullNameInput.invalid && fullNameInput.touched" class="error">Full Name is required.</div>
+
+      <label>Address:</label>
+      <textarea [(ngModel)]="address" name="address" rows="2" required #addressInput="ngModel"></textarea>
+      <div *ngIf="addressInput.invalid && addressInput.touched" class="error">Address is required.</div>
+
+      <label>City:</label>
+      <input type="text" [(ngModel)]="city" name="city" required #cityInput="ngModel">
+      <div *ngIf="cityInput.invalid && cityInput.touched" class="error">City is required.</div>
+
+      <label>Pincode:</label>
+      <input type="text" [(ngModel)]="pincode" name="pincode" pattern="[0-9]{6}" required #pincodeInput="ngModel">
+      <div *ngIf="pincodeInput.invalid && pincodeInput.touched" class="error">
+        Pincode is required and must be 6 digits.
+      </div>
+
+      <label>Phone Number:</label>
+      <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required #phoneInput="ngModel">
+      <div *ngIf="phoneInput.invalid && phoneInput.touched" class="error">
+        Phone Number is required and must be 10 digits.
+      </div>
+
+      <label>Payment Method:</label>
+      <select [(ngModel)]="paymentMethod" name="paymentMethod" required>
+        <option value="COD">Cash on Delivery</option>
+        <option value="UPI" disabled>UPI (Coming Soon)</option>
+      </select>
+
+      <button type="submit" [disabled]="isSubmitting">Place Order</button>
+    </form>
+
+    <div class="order-summary">
+      <h3>🧾 Order Summary</h3>
+      <div *ngFor="let item of cartItems">
+        <p>{{ item.productName }} x {{ item.quantity }} — ₹{{ item.price * item.quantity | number:'1.2-2' }}</p>
+      </div>
+      <h4>Total: ₹{{ totalPrice | number:'1.2-2' }}</h4>
+    </div>
+  </div>
+</div>

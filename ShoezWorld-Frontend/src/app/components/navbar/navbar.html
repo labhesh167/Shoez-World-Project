@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+      <img src="images/Logo.png" alt="ShoezWorld Logo" class="nav-logo">
+      ShoezWorld
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+          <ul class="dropdown-menu">
+            <!-- show loading message if categories not loaded -->
+            <ng-container *ngIf="categoriesLoaded; else loadingCategories">
+              <li *ngFor="let category of categories">
+                <a class="dropdown-item" [routerLink]="['/category', category.id]">{{ category.name }}</a>
+              </li>
+            </ng-container>
+            <ng-template #loadingCategories>
+              <li><span class="dropdown-item text-muted">Loading categories...</span></li>
+            </ng-template>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orders">Orders</a>
+        </li>
+
+        <!-- Admin-only links -->
+        <li class="nav-item dropdown" *ngIf="isAdmin">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Admin</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/admin/dashboard" routerLinkActive="active">📊Dashboard</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/products" routerLinkActive="active">📦Manage Products</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/orders" routerLinkActive="active">📝Manage Orders</a></li>
+            <li><a class="dropdown-item" routerLink="/admin/users" routerLinkActive="active">👥Manage Users</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="logout()" style="cursor: pointer">Logout</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

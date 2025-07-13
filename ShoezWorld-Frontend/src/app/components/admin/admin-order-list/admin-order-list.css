@@ -1,0 +1,58 @@
+.admin-container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #1f2937;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #f1f5f9;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 10px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #374151;
+}
+
+.admin-table th {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+.admin-table tr:nth-child(even) {
+  background: #27303f;
+}
+
+.admin-table tr:hover {
+  background: #374151;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.completed {
+  background-color: #22c55e;
+  color: #111827;
+}
+
+.pending {
+  background-color: #facc15;
+  color: #111827;
+}

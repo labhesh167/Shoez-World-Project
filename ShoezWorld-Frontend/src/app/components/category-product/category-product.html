@@ -1,0 +1,15 @@
+<div class="category-container">
+  <h2 class="category-heading">Products in this Category</h2>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <img [src]="product.image" alt="{{product.name}}">
+      <div class="details">
+        <h4>{{ product.name }}</h4>
+        <p class="desc">{{ product.description }}</p>
+        <h5 class="price">₹{{ product.price }}</h5>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

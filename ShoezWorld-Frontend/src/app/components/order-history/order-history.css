@@ -1,0 +1,139 @@
+/* Page background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #85f3a0);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Order Page Container */
+.order-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 35px;
+  background: #fefefe;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Heading */
+.order-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fc3e24;
+  font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Empty Orders Text */
+.empty-message p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Grid Layout */
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* Order Card */
+.order-card {
+  background: hsl(177, 44%, 23%);
+  color: #f0f0f0;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Cancelled Order Card */
+.order-card.cancelled {
+  background: #fdecea;
+  color: #333;
+  border: 2px solid #e53935;
+}
+
+.order-card.cancelled .order-total {
+  color: #d32f2f;
+}
+
+.order-card .cancel-msg {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #ffcdd2;
+  color: #b71c1c;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Order Heading */
+.order-card h4 {
+  font-size: 1.6rem;
+  color: #ffce3a;
+  margin-bottom: 14px;
+}
+
+/* Order Total Price */
+.order-total {
+  font-size: 1.3rem;
+  margin: 14px 0;
+  color: #ffe773;
+  font-weight: 600;
+}
+
+/* Order Items Section */
+.order-items {
+  margin-top: 16px;
+}
+
+.order-items h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffce3a;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-item span {
+  font-size: 1rem;
+}
+
+.item-name {
+  flex: 1;
+  font-weight: 600;
+  color: #ffe773;
+}
+
+/* Cancel button */
+.order-card button {
+  margin-top: 14px;
+  padding: 10px 16px;
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.order-card button:hover {
+  background: #ff7961;
+}

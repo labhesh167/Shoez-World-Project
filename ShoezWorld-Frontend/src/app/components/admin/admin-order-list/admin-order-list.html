@@ -1,0 +1,29 @@
+<div class="admin-container">
+  <h2 class="title">📑 Admin | Order List</h2>
+
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>User</th>
+        <th>Total Price (₹)</th>
+        <th>Status</th>
+        <th>Ordered On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ order.user.username }}</td>
+        <td>{{ order.totalAmount | number:'1.2-2' }}</td>
+        <td>
+          <span class="status" [ngClass]="{
+            'completed': order.status === 'COMPLETED',
+            'pending': order.status === 'PENDING'
+          }">{{ order.status }}</span>
+        </td>
+        <td>{{ order.orderDate | date: 'dd/MM/yyyy, h:mm a' }}</td> <!-- ✅ fixed -->
+      </tr>
+    </tbody>
+  </table>
+</div>

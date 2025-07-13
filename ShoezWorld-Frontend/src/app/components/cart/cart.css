@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #85f3a0);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Cart Page Container */
+.cart-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 35px;
+  background: #fefefe;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Heading */
+.cart-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fc3e24;
+  font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Empty Cart Text */
+.empty-message p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Grid Layout */
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* Cart Item Card */
+.cart-card {
+  background: hsl(177, 44%, 23%);
+  color: #f0f0f0;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Product Image */
+.cart-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #ececec;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+/* Product Name */
+.details h4 {
+  font-size: 1.5rem;
+  color: #ffce3a;
+  margin-bottom: 12px;
+}
+
+/* Description Text */
+.details .desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Price & Quantity */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+/* Remove Button */
+.details button {
+  padding: 12px 26px;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.details button:hover {
+  background: #ff4757;
+  transform: translateY(-2px);
+}
+
+/* Cart Summary Section */
+.summary {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.summary h3 {
+  font-size: 2.4rem;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.summary button {
+  padding: 16px 42px;
+  background: #ffce3a;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.summary button:hover {
+  background: #ffe773;
+  transform: translateY(-2px);
+}

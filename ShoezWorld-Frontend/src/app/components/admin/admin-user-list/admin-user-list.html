@@ -1,0 +1,30 @@
+<div class="admin-container">
+  <h2 class="title">👑 Admin | User Management</h2>
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <span class="role-badge" [ngClass]="{'admin-role': user.role === 'ADMIN', 'user-role': user.role === 'USER'}">
+            {{ user.role }}
+          </span>
+        </td>
+        <td>
+          <button class="delete-btn" (click)="deleteUser(user.username)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
