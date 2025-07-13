@@ -1,4 +1,4 @@
-# 👟 Shoez World 🌍
+# 👟 Shoez World 
 
 An e-commerce web application for buying shoes, built using **Spring Boot**, **Angular**, **MySQL**, **Hibernate**, **JPA**, and **JWT Authentication**.  
 It offers distinct modules for **Users** and **Admins**, each with specific roles and secure access control.
