@@ -133,11 +133,32 @@ http://localhost:4200
 ---
 
 ## 📸 Screenshots
-
+  #User Access
 - **Home Page**
   ![Home Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Home%20Page.png)
+  
 - **Registration Page**
   ![Registration Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Registration%20page.png)
+
+- **Login Page**
+  ![Login Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Login%20page.png)
+
+- **Products Page**
+  ![Products Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Product%20Page.png)
+
+- **Product by Category**
+  ![Category Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Category%20Page.png)
+
+- **Cart Page**
+  ![Cart Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Cart%20Page.png)
+
+- **Checkout Page**
+  ![Checkout Page](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Checkout%20Page.png)
+
+- **Order History**
+  ![Order History](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Orders-History.png)
+
+- ****
 ---
 
 ## 📜 License
