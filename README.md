@@ -158,7 +158,19 @@ http://localhost:4200
 - **Order History**
   ![Order History](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Orders-History.png)
 
-- ****
+__Admin Access__
+
+- **Admin Dashboard**
+  ![Admin Dashboard](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Admin%20Dashboard.png)
+
+- **Admin Product Management**
+  ![Admin Product list](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Admin%20Manage%20Product%20Page.png)
+
+- **Admin Order Records**
+  ![Admin Order records](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Admin%20Order%20List.png)
+
+- **Admin Users Management**
+  ![Admin user list](https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Admin%20User%20list.png)
 ---
 
 ## 📜 License
