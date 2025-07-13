@@ -135,7 +135,7 @@ http://localhost:4200
 ## 📸 Screenshots
 
 - # Home Page
-     !Project Screenshots/Home Page.png
+     !https://github.com/labhesh167/Shoez-World-Project/blob/master/Project%20Screenshots/Home%20Page.png
 
 ---
 
